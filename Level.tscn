@@ -1,0 +1,186 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://assets/sky.png" type="Texture" id=1]
+[ext_resource path="res://assets/GL-37.png" type="Texture" id=2]
+[ext_resource path="res://assets/ground.png" type="Texture" id=3]
+[ext_resource path="res://assets/GL-38.png" type="Texture" id=4]
+[ext_resource path="res://assets/GL-40.png" type="Texture" id=5]
+[ext_resource path="res://assets/GL-36.png" type="Texture" id=6]
+[ext_resource path="res://assets/MicrosoftTeams-image (7).png" type="Texture" id=7]
+[ext_resource path="res://assets/GL-19.png" type="Texture" id=8]
+[ext_resource path="res://wind_sway_material.tres" type="Material" id=9]
+[ext_resource path="res://assets/GL-39.png" type="Texture" id=10]
+[ext_resource path="res://Level.gd" type="Script" id=11]
+[ext_resource path="res://trees/Tree1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=13]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=14]
+[ext_resource path="res://trees/Tree2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/GL-45.png" type="Texture" id=17]
+[ext_resource path="res://assets/GL-41.png" type="Texture" id=18]
+[ext_resource path="res://assets/GL-42.png" type="Texture" id=19]
+[ext_resource path="res://assets/GL-43.png" type="Texture" id=20]
+[ext_resource path="res://assets/GL-44.png" type="Texture" id=21]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1949, 10 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="Sky" type="TextureRect" parent="."]
+margin_left = -1451.0
+margin_top = -2.0
+margin_right = 4046.0
+margin_bottom = 944.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MicrosoftTeams-image(7)" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1802, 413 )
+texture = ExtResource( 7 )
+
+[node name="TreesBG" type="Node2D" parent="."]
+
+[node name="Tree3" parent="TreesBG" instance=ExtResource( 12 )]
+position = Vector2( 2891, 625 )
+
+[node name="Tree2" parent="TreesBG" instance=ExtResource( 15 )]
+position = Vector2( 1919, 533 )
+
+[node name="Tree4" parent="TreesBG" instance=ExtResource( 15 )]
+position = Vector2( 3242, 533 )
+
+[node name="Clouds" type="Node2D" parent="."]
+
+[node name="CloudTimer" type="Timer" parent="Clouds"]
+wait_time = 1.33
+autostart = true
+
+[node name="Buildings" type="Node2D" parent="."]
+
+[node name="Gl-36" type="Sprite" parent="Buildings"]
+position = Vector2( 187, 496 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 6 )
+
+[node name="Gl-38" type="Sprite" parent="Buildings"]
+position = Vector2( 910, 483 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 4 )
+
+[node name="Gl-37" type="Sprite" parent="Buildings"]
+position = Vector2( 557, 426 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 2 )
+
+[node name="Gl-39" type="Sprite" parent="Buildings"]
+position = Vector2( 1304, 454 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 10 )
+
+[node name="Gl-40" type="Sprite" parent="Buildings"]
+position = Vector2( 1695, 508 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 5 )
+
+[node name="Gl-41" type="Sprite" parent="Buildings"]
+position = Vector2( 2127, 514 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 18 )
+
+[node name="Gl-42" type="Sprite" parent="Buildings"]
+position = Vector2( 2445, 513 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 19 )
+
+[node name="Gl-43" type="Sprite" parent="Buildings"]
+position = Vector2( 2762, 512 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 20 )
+
+[node name="Gl-44" type="Sprite" parent="Buildings"]
+position = Vector2( 3082, 513 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 21 )
+
+[node name="Gl-45" type="Sprite" parent="Buildings"]
+position = Vector2( 3403, 513 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 17 )
+
+[node name="TreesFG" type="Node2D" parent="."]
+
+[node name="Tree1" parent="TreesFG" instance=ExtResource( 12 )]
+position = Vector2( 35, 625 )
+
+[node name="Tree5" parent="TreesFG" instance=ExtResource( 15 )]
+position = Vector2( 2606, 533 )
+
+[node name="Tree3" parent="TreesFG" instance=ExtResource( 12 )]
+position = Vector2( 2255, 625 )
+
+[node name="Door" parent="." instance=ExtResource( 16 )]
+position = Vector2( 2129, 614 )
+
+[node name="Player" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1668, 473 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 1500, 705 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 283, 0 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( -8, 521 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 283, 0 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 3594, 521 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 283, 0 )
+shape = SubResource( 1 )
+
+[node name="UI" parent="." instance=ExtResource( 14 )]
+
+[node name="Grass" type="TextureRect" parent="."]
+margin_left = -4212.0
+margin_top = 714.0
+margin_right = 24484.0
+margin_bottom = 1613.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sidewalk" type="ColorRect" parent="."]
+margin_left = -3.0
+margin_top = 693.0
+margin_right = 3604.0
+margin_bottom = 714.0
+color = Color( 0.105882, 0.160784, 0.356863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gl-19" type="Sprite" parent="."]
+material = ExtResource( 9 )
+position = Vector2( 2255, 624 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 8 )
+
+[connection signal="timeout" from="Clouds/CloudTimer" to="." method="_on_CloudTimer_timeout"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/GL-19.png" type="Texture" id=1]
+[ext_resource path="res://wind_sway_material.tres" type="Material" id=2]
+
+[node name="Tree1" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+material = ExtResource( 2 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 1 )
