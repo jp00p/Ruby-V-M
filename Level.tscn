@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://assets/sky.png" type="Texture" id=1]
+[ext_resource path="res://assets/sky-strip.png" type="Texture" id=1]
 [ext_resource path="res://assets/GL-37.png" type="Texture" id=2]
 [ext_resource path="res://assets/ground.png" type="Texture" id=3]
 [ext_resource path="res://assets/GL-38.png" type="Texture" id=4]
@@ -21,23 +21,35 @@
 [ext_resource path="res://assets/GL-42.png" type="Texture" id=19]
 [ext_resource path="res://assets/GL-43.png" type="Texture" id=20]
 [ext_resource path="res://assets/GL-44.png" type="Texture" id=21]
+[ext_resource path="res://assets/doors/GL-54.png" type="Texture" id=22]
+[ext_resource path="res://assets/business-people/GL-64.png" type="Texture" id=23]
+[ext_resource path="res://ExtraDeleter.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/business-people/GL-63.png" type="Texture" id=25]
+[ext_resource path="res://assets/business-people/GL-66.png" type="Texture" id=26]
+[ext_resource path="res://assets/happy_adveture.mp3" type="AudioStream" id=27]
+[ext_resource path="res://assets/VictorySmall.ogg" type="AudioStream" id=28]
+[ext_resource path="res://assets/Error or failed.mp3" type="AudioStream" id=29]
+[ext_resource path="res://assets/doors/GL-48.png" type="Texture" id=30]
+[ext_resource path="res://assets/game_over_bad_chest.wav" type="AudioStream" id=31]
+[ext_resource path="res://assets/doors/GL-50.png" type="Texture" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1949, 10 )
+extents = Vector2( 2718, 10 )
 
-[node name="Level" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2867.5, 19 )
+
+[node name="Level" type="Node2D" groups=["Level"]]
 script = ExtResource( 11 )
 
 [node name="Sky" type="TextureRect" parent="."]
-margin_left = -1451.0
-margin_top = -2.0
-margin_right = 4046.0
-margin_bottom = 944.0
+margin_left = -1306.0
+margin_top = -3185.0
+margin_right = 5104.0
+margin_bottom = 815.0
 texture = ExtResource( 1 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+stretch_mode = 2
 
 [node name="MicrosoftTeams-image(7)" type="Sprite" parent="."]
 visible = false
@@ -46,14 +58,28 @@ texture = ExtResource( 7 )
 
 [node name="TreesBG" type="Node2D" parent="."]
 
-[node name="Tree3" parent="TreesBG" instance=ExtResource( 12 )]
-position = Vector2( 2891, 625 )
-
 [node name="Tree2" parent="TreesBG" instance=ExtResource( 15 )]
 position = Vector2( 1919, 533 )
 
 [node name="Tree4" parent="TreesBG" instance=ExtResource( 15 )]
 position = Vector2( 3242, 533 )
+
+[node name="TreesFG" type="Node2D" parent="."]
+
+[node name="Tree1" parent="TreesFG" instance=ExtResource( 12 )]
+position = Vector2( 35, 625 )
+
+[node name="Tree5" parent="TreesFG" instance=ExtResource( 15 )]
+position = Vector2( 2606, 533 )
+
+[node name="Tree3" parent="TreesFG" instance=ExtResource( 12 )]
+position = Vector2( 2255, 625 )
+
+[node name="Tree4" parent="TreesFG" instance=ExtResource( 12 )]
+position = Vector2( 2891, 625 )
+
+[node name="Tree6" parent="TreesFG" instance=ExtResource( 12 )]
+position = Vector2( 2955, 625 )
 
 [node name="Clouds" type="Node2D" parent="."]
 
@@ -113,43 +139,64 @@ position = Vector2( 3403, 513 )
 scale = Vector2( 0.34, 0.34 )
 texture = ExtResource( 17 )
 
-[node name="TreesFG" type="Node2D" parent="."]
-
-[node name="Tree1" parent="TreesFG" instance=ExtResource( 12 )]
-position = Vector2( 35, 625 )
-
-[node name="Tree5" parent="TreesFG" instance=ExtResource( 15 )]
-position = Vector2( 2606, 533 )
-
-[node name="Tree3" parent="TreesFG" instance=ExtResource( 12 )]
-position = Vector2( 2255, 625 )
-
 [node name="Door" parent="." instance=ExtResource( 16 )]
 position = Vector2( 2129, 614 )
+task_id = "task1"
+
+[node name="Door2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3084, 613 )
+task_id = "task2"
+open_graphic = ExtResource( 32 )
+person_graphic = ExtResource( 25 )
+
+[node name="Door3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1410, 613 )
+task_id = "task3"
+person_graphic = ExtResource( 23 )
+
+[node name="Door4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 124, 613 )
+task_id = "task4"
+open_graphic = ExtResource( 30 )
+person_graphic = ExtResource( 26 )
+
+[node name="Door5" parent="." instance=ExtResource( 16 )]
+position = Vector2( 974, 613 )
+task_id = "task5"
+closed_graphic = ExtResource( 22 )
+open_graphic = ExtResource( 22 )
+person_graphic = ExtResource( 23 )
+
+[node name="Gl-19" type="Sprite" parent="."]
+material = ExtResource( 9 )
+position = Vector2( 2255, 624 )
+scale = Vector2( 0.34, 0.34 )
+texture = ExtResource( 8 )
+
+[node name="ExtrasLayerBG" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1668, 473 )
+position = Vector2( 1668, 607 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 1500, 705 )
+[node name="ExtrasLayerFG" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 283, 0 )
-shape = SubResource( 1 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2( -8, 521 )
+[node name="SideWall1" type="StaticBody2D" parent="."]
+position = Vector2( -15, 0 )
 rotation = 1.5708
+collision_layer = 2
+collision_mask = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideWall1"]
 position = Vector2( 283, 0 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="SideWall2" type="StaticBody2D" parent="."]
 position = Vector2( 3594, 521 )
 rotation = 1.5708
+collision_layer = 2
+collision_mask = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SideWall2"]
 position = Vector2( 283, 0 )
 shape = SubResource( 1 )
 
@@ -157,9 +204,9 @@ shape = SubResource( 1 )
 
 [node name="Grass" type="TextureRect" parent="."]
 margin_left = -4212.0
-margin_top = 714.0
+margin_top = 712.0
 margin_right = 24484.0
-margin_bottom = 1613.0
+margin_bottom = 1611.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 1
@@ -168,19 +215,62 @@ __meta__ = {
 }
 
 [node name="Sidewalk" type="ColorRect" parent="."]
-margin_left = -3.0
+margin_left = -1128.0
 margin_top = 693.0
-margin_right = 3604.0
-margin_bottom = 714.0
+margin_right = 5057.0
+margin_bottom = 717.0
 color = Color( 0.105882, 0.160784, 0.356863, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Gl-19" type="Sprite" parent="."]
-material = ExtResource( 9 )
-position = Vector2( 2255, 624 )
-scale = Vector2( 0.34, 0.34 )
-texture = ExtResource( 8 )
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2( 0, 721 )
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2( 1739.5, -9 )
+shape = SubResource( 2 )
+
+[node name="ExtraSpawn1" type="Position2D" parent="."]
+position = Vector2( -488, 611 )
+
+[node name="ExtraSpawn2" type="Position2D" parent="."]
+position = Vector2( 4037, 611 )
+
+[node name="ExtraDeleter" parent="." instance=ExtResource( 24 )]
+position = Vector2( -903, 609 )
+
+[node name="ExtraDeleter2" parent="." instance=ExtResource( 24 )]
+position = Vector2( 4560, 609 )
+
+[node name="ExtraTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="DennisTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+
+[node name="Error" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 29 )
+volume_db = -7.0
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
+volume_db = -15.0
+autoplay = true
+
+[node name="Gameover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
 
 [connection signal="timeout" from="Clouds/CloudTimer" to="." method="_on_CloudTimer_timeout"]
+[connection signal="spawn_heart" from="Player" to="." method="_on_Player_spawn_heart"]
+[connection signal="end_game" from="UI" to="." method="_on_UI_end_game"]
+[connection signal="timeout" from="ExtraTimer" to="." method="_on_ExtraTimer_timeout"]
+[connection signal="timeout" from="DennisTimer" to="." method="_on_DennisTimer_timeout"]

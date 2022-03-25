@@ -12,7 +12,6 @@ var speed = 0
 func _ready():
 	randomize()
 	self.modulate.a = rand_range(24,255)
-	print(self.modulate)
 	self.scale.x = rand_range(1,1.2)
 	self.scale.y = rand_range(1,1.3)
 	var cloud = cloud_graphics[randi() % cloud_graphics.size()]

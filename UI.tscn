@@ -1,12 +1,21 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/logo.png" type="Texture" id=1]
 [ext_resource path="res://assets/completed-tasks-frame.png" type="Texture" id=2]
 [ext_resource path="res://UI.gd" type="Script" id=3]
 [ext_resource path="res://assets/GL-10.png" type="Texture" id=4]
 [ext_resource path="res://assets/Sofia Pro Bold Az.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://assets/GL-29.png" type="Texture" id=6]
+[ext_resource path="res://assets/business owners bubble-72.png" type="Texture" id=6]
 [ext_resource path="res://assets/Sofia Pro Regular Az.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/Phone Icon-76.png" type="Texture" id=8]
+[ext_resource path="res://assets/GL-32.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+font_data = ExtResource( 7 )
+
+[sub_resource type="Theme" id=8]
+default_font = SubResource( 7 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.913725, 0.0980392, 0.462745, 1 )
@@ -24,104 +33,63 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 anti_aliasing_size = 0.8
 
+[sub_resource type="DynamicFont" id=11]
+size = 20
+font_data = ExtResource( 5 )
+
 [sub_resource type="DynamicFont" id=3]
 size = 42
 font_data = ExtResource( 5 )
 
+[sub_resource type="DynamicFont" id=10]
+size = 48
+font_data = ExtResource( 5 )
+
 [sub_resource type="DynamicFont" id=4]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 32
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 88
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=15]
 size = 24
-font_data = ExtResource( 7 )
+font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=5]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control/MarginContainer/VBoxContainer/MessagePopup:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Control/MarginContainer/VBoxContainer/MessagePopup:rect_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Control/MarginContainer/VBoxContainer/MessagePopup:rect_position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 300 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Control/MarginContainer/VBoxContainer/MessagePopup:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
+[sub_resource type="DynamicFont" id=17]
+size = 22
+use_filter = true
+font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=6]
-resource_name = "fade_message"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control/MarginContainer/VBoxContainer/MessagePopup:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Control/MarginContainer/VBoxContainer/MessagePopup:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
+[sub_resource type="DynamicFont" id=16]
+size = 22
+use_filter = true
+font_data = ExtResource( 5 )
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 3 )
 
-[node name="Control" type="Control" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color( 0.0627451, 0.133333, 0.34902, 1 )
 
-[node name="MarginContainer" type="MarginContainer" parent="Control"]
+[node name="Main" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 8 )
+
+[node name="M" type="MarginContainer" parent="Main"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 16
@@ -132,13 +100,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer"]
+[node name="V" type="VBoxContainer" parent="Main/M"]
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 1008.0
 margin_bottom = 584.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
+[node name="H" type="HBoxContainer" parent="Main/M/V"]
 margin_right = 992.0
 margin_bottom = 97.0
 custom_constants/separation = 16
@@ -146,7 +114,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Logo" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="V" type="VBoxContainer" parent="Main/M/V/H"]
+margin_right = 143.0
+margin_bottom = 97.0
+custom_constants/separation = 32
+
+[node name="Logo" type="TextureRect" parent="Main/M/V/H/V"]
 margin_right = 143.0
 margin_bottom = 84.0
 rect_min_size = Vector2( 143, 84 )
@@ -155,13 +128,17 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
 
-[node name="Progress" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="V2" type="VBoxContainer" parent="Main/M/V/H"]
 margin_left = 159.0
 margin_right = 641.0
 margin_bottom = 97.0
+
+[node name="Progress" type="TextureRect" parent="Main/M/V/H/V2"]
+margin_right = 482.0
+margin_bottom = 86.0
 texture = ExtResource( 2 )
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Progress"]
+[node name="MarginContainer" type="MarginContainer" parent="Main/M/V/H/V2/Progress"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 14
@@ -172,7 +149,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TaskProgress" type="ProgressBar" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Progress/MarginContainer"]
+[node name="TaskProgress" type="ProgressBar" parent="Main/M/V/H/V2/Progress/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 468.0
@@ -181,17 +158,12 @@ rect_min_size = Vector2( 0, 32 )
 custom_colors/font_color = Color( 0, 0, 0, 0 )
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
-value = 33.0
+max_value = 180.0
+value = 180.0
 
-[node name="Control" type="Control" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Score" type="TextureRect" parent="Main/M/V/H"]
 margin_left = 657.0
-margin_right = 729.0
-margin_bottom = 97.0
-rect_min_size = Vector2( 72, 0 )
-
-[node name="Clock" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
-margin_left = 745.0
-margin_right = 956.5
+margin_right = 868.5
 margin_bottom = 97.6
 rect_min_size = Vector2( 211.5, 97.6 )
 size_flags_vertical = 0
@@ -199,37 +171,74 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Clock"]
+[node name="C" type="CenterContainer" parent="Main/M/V/H/Score"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer/Clock/CenterContainer"]
-margin_left = 62.0
-margin_top = 27.0
-margin_right = 148.0
-margin_bottom = 70.0
+[node name="V" type="VBoxContainer" parent="Main/M/V/H/Score/C"]
+margin_left = 75.0
+margin_top = 15.0
+margin_right = 136.0
+margin_bottom = 82.0
+
+[node name="HeartsLabel" type="Label" parent="Main/M/V/H/Score/C/V"]
+margin_right = 61.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 3 )
-text = "3:00"
+custom_fonts/font = SubResource( 11 )
+text = "Hearts"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MessagePopup" type="CenterContainer" parent="Control/MarginContainer/VBoxContainer"]
-margin_top = 300.0
-margin_right = 992.0
-margin_bottom = 662.0
+[node name="HeartsValue" type="Label" parent="Main/M/V/H/Score/C/V"]
+margin_top = 24.0
+margin_right = 61.0
+margin_bottom = 67.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+text = "0"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="Control/MarginContainer/VBoxContainer/MessagePopup"]
+[node name="Cellphone" type="TextureRect" parent="Main/M/V/H"]
+margin_left = 884.0
+margin_right = 884.0
+margin_bottom = 97.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="StageName" type="Label" parent="Main/M/V"]
+margin_top = 101.0
+margin_right = 992.0
+margin_bottom = 149.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = SubResource( 10 )
+text = "Stage 1"
+align = 1
+
+[node name="MessagePopup" type="CenterContainer" parent="Main/M/V"]
+margin_top = 153.0
+margin_right = 992.0
+margin_bottom = 515.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Main/M/V/MessagePopup"]
 margin_left = 207.0
 margin_right = 784.0
 margin_bottom = 362.0
@@ -237,40 +246,204 @@ rect_min_size = Vector2( 577, 362 )
 texture = ExtResource( 6 )
 expand = true
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/MarginContainer/VBoxContainer/MessagePopup/TextureRect"]
+[node name="M" type="MarginContainer" parent="Main/M/V/MessagePopup/TextureRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
+custom_constants/margin_right = 24
+custom_constants/margin_top = 72
+custom_constants/margin_left = 232
+custom_constants/margin_bottom = 24
+
+[node name="QuestText" type="Label" parent="Main/M/V/MessagePopup/TextureRect/M"]
+margin_left = 232.0
+margin_top = 72.0
+margin_right = 553.0
+margin_bottom = 392.0
+rect_min_size = Vector2( 320, 320 )
+custom_colors/font_color = Color( 0.0627451, 0.133333, 0.34902, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Hi Ruby! I'll be in court until around 2pm today
+
+Can you please handle all my calls until then?
+
+Thank you!"
+autowrap = true
+
+[node name="ClientName" type="Label" parent="Main/M/V/MessagePopup/TextureRect"]
+margin_left = 52.0
+margin_top = 251.0
+margin_right = 204.0
+margin_bottom = 274.0
+custom_colors/font_color = Color( 0.2, 0.2, 0.2, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Ms. Attorney"
+align = 1
+
+[node name="ClientName2" type="RichTextLabel" parent="Main/M/V/MessagePopup/TextureRect"]
+margin_left = 45.0
+margin_top = 382.0
+margin_right = 508.0
+margin_bottom = 414.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 13 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Click or Press Enter to Begin![/wave][/center]"
+meta_underlined = false
+text = "Click or Press Enter to Begin!"
+fit_content_height = true
+scroll_active = false
+
+[node name="StageComplete" type="CenterContainer" parent="Main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Main/StageComplete"]
+margin_left = 212.0
+margin_top = 211.0
+margin_right = 812.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 600, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 14 )
+bbcode_enabled = true
+bbcode_text = "[center][rainbow]Stage complete![/rainbow][/center]"
+text = "Stage complete!"
+fit_content_height = true
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/StageComplete"]
+margin_left = 212.0
+margin_top = 211.0
+margin_right = 812.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 600, 0 )
+custom_fonts/normal_font = SubResource( 14 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Stage complete![/wave][/center]"
+text = "Stage complete!"
+fit_content_height = true
+scroll_active = false
+
+[node name="GameOver" type="CenterContainer" parent="Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/MessagePopup/TextureRect/MarginContainer"]
-margin_left = 8.0
-margin_top = 142.0
-margin_right = 569.0
-margin_bottom = 220.0
-custom_fonts/font = SubResource( 4 )
-text = "Complete the tasks!
-Introduction text placeholder
-Game starts after this goes away"
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/GameOver"]
+margin_left = 212.0
+margin_top = 227.0
+margin_right = 812.0
+margin_bottom = 372.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/GameOver/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 600, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 14 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]Game over![/wave][/center]"
+text = "Game over!"
+fit_content_height = true
+scroll_active = false
+
+[node name="Label" type="Label" parent="Main/GameOver/VBoxContainer"]
+margin_top = 93.0
+margin_right = 600.0
+margin_bottom = 117.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Try again to get the full vision and mission!"
+align = 1
+
+[node name="Clicktorestart" type="Label" parent="Main/GameOver/VBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 121.0
+margin_right = 600.0
+margin_bottom = 145.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 15 )
+text = "Click or Press Enter to restart"
+align = 1
+
+[node name="TheMessage" type="CenterContainer" parent="Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Main/TheMessage"]
+margin_left = 223.0
+margin_top = 119.0
+margin_right = 800.0
+margin_bottom = 481.0
+rect_min_size = Vector2( 577, 362 )
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="Main/TheMessage/TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Main/TheMessage/TextureRect/MarginContainer"]
+margin_left = 32.0
+margin_top = 73.0
+margin_right = 545.0
+margin_bottom = 288.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 1
+custom_fonts/font = SubResource( 17 )
+text = "You’ve unlocked Ruby’s Vision!
+
+Please take a moment to read through before you move to level 2! 
+
+“We deliver exceptional experiences that build customer loyalty and empower businesses to freely pursue their purpose, cultivating diverse and thriving local economies.” "
 align = 1
 valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="GameTimer" type="Timer" parent="."]
-wait_time = 180.0
+[node name="Ringing" type="RichTextLabel" parent="Main"]
+visible = false
+margin_left = 380.0
+margin_top = 77.0
+margin_right = 643.0
+margin_bottom = 104.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = SubResource( 16 )
+bbcode_enabled = true
+bbcode_text = "[wave freq=50 amp=5]Find the ringing phone![/wave]"
+text = "Find the ringing phone!"
+scroll_active = false
+
+[node name="GameTimer" type="Timer" parent="." groups=["game_timer"]]
+wait_time = 25.0
 one_shot = true
 
 [node name="MessageTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 5.0
 one_shot = true
-autostart = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 5 )
-anims/fade_message = SubResource( 6 )
-
-[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
+[connection signal="value_changed" from="Main/M/V/H/V2/Progress/MarginContainer/TaskProgress" to="." method="_on_TaskProgress_value_changed"]

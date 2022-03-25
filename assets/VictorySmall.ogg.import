@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/VictorySmall.ogg-cccc8cfc44b28698184edec54a74c003.oggstr"
+
+[deps]
+
+source_file="res://assets/VictorySmall.ogg"
+dest_files=[ "res://.import/VictorySmall.ogg-cccc8cfc44b28698184edec54a74c003.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

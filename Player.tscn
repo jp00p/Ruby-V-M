@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=103 format=2]
 
 [ext_resource path="res://assets/RunCycle PNG/RunCycle_00012.png" type="Texture" id=1]
 [ext_resource path="res://assets/RunCycle PNG/RunCycle_00032.png" type="Texture" id=2]
@@ -28,10 +28,85 @@
 [ext_resource path="res://assets/RunCycle PNG/RunCycle_00025.png" type="Texture" id=26]
 [ext_resource path="res://assets/4 frame startup/2 frame_startup_Run00004.png" type="Texture" id=27]
 [ext_resource path="res://Player.gd" type="Script" id=28]
+[ext_resource path="res://assets/Sofia Pro Bold Az.otf" type="DynamicFontData" id=29]
 [ext_resource path="res://assets/RunCycle PNG/RunCycle_00009.png" type="Texture" id=30]
 [ext_resource path="res://assets/RunCycle PNG/RunCycle_00010.png" type="Texture" id=31]
 [ext_resource path="res://assets/RunCycle PNG/RunCycle_00011.png" type="Texture" id=32]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00067.png" type="Texture" id=33]
 [ext_resource path="res://assets/RunCycle PNG/RunCycle_00008.png" type="Texture" id=34]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00043.png" type="Texture" id=35]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00031.png" type="Texture" id=36]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00060.png" type="Texture" id=37]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00039.png" type="Texture" id=38]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00065.png" type="Texture" id=39]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00044.png" type="Texture" id=40]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00048.png" type="Texture" id=41]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00022.png" type="Texture" id=42]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00013.png" type="Texture" id=43]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00050.png" type="Texture" id=44]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00017.png" type="Texture" id=45]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00035.png" type="Texture" id=46]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00054.png" type="Texture" id=47]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00014.png" type="Texture" id=48]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00046.png" type="Texture" id=49]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00047.png" type="Texture" id=50]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00052.png" type="Texture" id=51]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00063.png" type="Texture" id=52]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00051.png" type="Texture" id=53]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00040.png" type="Texture" id=54]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00068.png" type="Texture" id=55]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00025.png" type="Texture" id=56]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00030.png" type="Texture" id=57]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00027.png" type="Texture" id=58]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00036.png" type="Texture" id=59]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00053.png" type="Texture" id=60]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00024.png" type="Texture" id=61]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00034.png" type="Texture" id=62]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00028.png" type="Texture" id=63]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00015.png" type="Texture" id=64]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00045.png" type="Texture" id=65]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00055.png" type="Texture" id=66]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00032.png" type="Texture" id=67]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00058.png" type="Texture" id=68]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00059.png" type="Texture" id=69]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00020.png" type="Texture" id=70]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00056.png" type="Texture" id=71]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00062.png" type="Texture" id=72]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00066.png" type="Texture" id=73]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00021.png" type="Texture" id=74]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00038.png" type="Texture" id=75]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00049.png" type="Texture" id=76]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00029.png" type="Texture" id=77]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00026.png" type="Texture" id=78]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00033.png" type="Texture" id=79]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00057.png" type="Texture" id=80]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00061.png" type="Texture" id=81]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00016.png" type="Texture" id=82]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00023.png" type="Texture" id=83]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00037.png" type="Texture" id=84]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00019.png" type="Texture" id=85]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00018.png" type="Texture" id=86]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00041.png" type="Texture" id=87]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00064.png" type="Texture" id=88]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00042.png" type="Texture" id=89]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00069.png" type="Texture" id=90]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00012.png" type="Texture" id=91]
+[ext_resource path="res://assets/Sad Cycle/SadCycle_00011.png" type="Texture" id=92]
+[ext_resource path="res://Camera2D.gd" type="Script" id=93]
+
+[sub_resource type="Shader" id=8]
+code = "shader_type canvas_item;
+
+uniform vec4 solid_color : hint_color;
+
+void fragment() {
+    vec4 texture_color = texture(TEXTURE, UV);
+    COLOR = vec4(mix(texture_color.rgb, solid_color.rgb, solid_color.a), texture_color.a);
+}"
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = SubResource( 8 )
+shader_param/solid_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -44,13 +119,64 @@ animations = [ {
 "loop": true,
 "name": "running",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 92 ), ExtResource( 91 ), ExtResource( 43 ), ExtResource( 48 ), ExtResource( 64 ), ExtResource( 82 ), ExtResource( 45 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 70 ), ExtResource( 74 ), ExtResource( 42 ), ExtResource( 83 ), ExtResource( 61 ), ExtResource( 56 ), ExtResource( 78 ), ExtResource( 58 ), ExtResource( 63 ), ExtResource( 77 ), ExtResource( 57 ), ExtResource( 36 ), ExtResource( 67 ), ExtResource( 79 ), ExtResource( 62 ), ExtResource( 46 ), ExtResource( 59 ), ExtResource( 84 ), ExtResource( 75 ), ExtResource( 38 ), ExtResource( 54 ), ExtResource( 87 ), ExtResource( 89 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 65 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 41 ), ExtResource( 76 ), ExtResource( 44 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 60 ), ExtResource( 47 ), ExtResource( 66 ), ExtResource( 71 ), ExtResource( 80 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 37 ), ExtResource( 81 ), ExtResource( 72 ), ExtResource( 52 ), ExtResource( 88 ), ExtResource( 39 ), ExtResource( 73 ), ExtResource( 33 ), ExtResource( 55 ), ExtResource( 90 ) ],
+"loop": true,
+"name": "sad",
+"speed": 24.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 33.0
 height = 60.0
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="CircleShape2D" id=3]
+radius = 104.173
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+outline_size = 1
+outline_color = Color( 0.439216, 0, 0.737255, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("InteractHint:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -64, -114 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "floating_text"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("InteractHint:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( -64, -114 ), Vector2( -64, -130 ) ]
+}
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 43.2897
+
+[node name="Player" type="KinematicBody2D" groups=["player"]]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource( 28 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
@@ -60,21 +186,24 @@ gravity = Vector2( -25, 0 )
 scale_amount = 0.19
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 9 )
 scale = Vector2( 0.19, 0.19 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "sad"
+frame = 21
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -185 )
 current = true
 zoom = Vector2( 1.33, 1.33 )
-limit_left = 0
-limit_right = 3594
+limit_left = -15
+limit_right = 3560
 smoothing_speed = 10.0
+script = ExtResource( 93 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 21 )
+position = Vector2( 0, 18 )
 shape = SubResource( 2 )
 
 [node name="DashTimer" type="Timer" parent="."]
@@ -84,5 +213,42 @@ one_shot = true
 [node name="DashPeriodTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+
+[node name="InteractHint" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -64.0
+margin_top = -114.0
+margin_right = 69.0
+margin_bottom = -90.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 4 )
+text = "Click!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "floating_text"
+anims/RESET = SubResource( 5 )
+anims/floating_text = SubResource( 6 )
+
+[node name="HeartArea" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeartArea"]
+position = Vector2( 0, 69 )
+shape = SubResource( 7 )
+
 [connection signal="timeout" from="DashTimer" to="." method="_on_DashTimer_timeout"]
 [connection signal="timeout" from="DashPeriodTimer" to="." method="_on_DashPeriodTimer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
